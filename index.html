@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Navigasi Belajarku | Hak dan Kewajiban</title>
+<style>
+:root{--navy:#17324d;--blue:#4f86b5;--light:#eaf4fb;--mint:#e7f5ef;--yellow:#fff5d9;--purple:#f0ecfb;--text:#304255;--muted:#6d7d8c;--border:#dbe6ee;--shadow:0 10px 30px rgba(31,63,88,.09)}
+*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);background:#f7fafc;line-height:1.65}a{text-decoration:none;color:inherit}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}.topin{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:900;color:var(--navy)}.brand small{display:block;font-size:.7rem;color:var(--muted)}nav{display:flex;gap:5px;flex-wrap:wrap}nav a{padding:8px 10px;border-radius:10px;font-size:.82rem;font-weight:800;color:#526779}nav a:hover{background:var(--light);color:var(--navy)}.menu{display:none}
+.hero{background:linear-gradient(135deg,#eaf4fb,#fff 55%,#eef8f4);padding:72px 22px 55px}.wrap{max-width:1180px;margin:auto}.heroGrid{display:grid;grid-template-columns:1.4fr .8fr;gap:30px;align-items:center}.eyebrow{display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:7px 12px;color:var(--blue);font-weight:900;font-size:.75rem}h1{font-size:clamp(2.5rem,6vw,4.4rem);line-height:1.02;letter-spacing:-2px;color:var(--navy);margin:18px 0 10px}.hero h2{color:#45657e;margin:0 0 15px}.hero p{max-width:720px;color:#596d7e}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}.btn{display:inline-flex;justify-content:center;align-items:center;padding:11px 15px;border-radius:12px;font-weight:900;border:1px solid transparent}.primary{background:var(--navy);color:#fff}.soft{background:#fff;border-color:var(--border);color:var(--navy)}.heroCard,.card,.source,.step,.case{background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow)}.heroCard{padding:24px}.heroCard .big{font-size:3rem}.progress{height:9px;background:#e6edf2;border-radius:99px;overflow:hidden}.progress span{display:block;width:12.5%;height:100%;background:var(--blue)}
+.section{padding:60px 22px}.alt{background:#fff}.kicker{font-size:.76rem;font-weight:900;color:var(--blue);letter-spacing:1px;text-transform:uppercase}.head{max-width:760px;margin-bottom:25px}h2{font-size:2rem;line-height:1.2;color:var(--navy);margin:7px 0 10px}h3{color:var(--navy)}.muted{color:var(--muted)}
+.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:19px;min-height:145px}.step:hover{transform:translateY(-2px)}.num{font-size:.72rem;font-weight:900;color:var(--blue)}.step h3{font-size:1rem;margin:7px 0}.step p{font-size:.84rem;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:22px;display:flex;flex-direction:column}.card .icon{font-size:1.9rem}.card h3{margin:9px 0 5px}.card p{color:#607383;font-size:.93rem}.blue{background:var(--light)}.mint{background:var(--mint)}.yellow{background:var(--yellow)}.purple{background:var(--purple)}
+.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin-top:20px}.timeline div{text-align:center;background:#fff;border:1px solid var(--border);border-radius:13px;padding:11px 5px;font-size:.78rem;font-weight:900}
+.resource{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:20px}.source{padding:24px}.source ul{padding-left:20px}.quote{padding:18px 20px;background:var(--light);border-left:4px solid var(--blue);border-radius:0 14px 14px 0;margin:20px 0}
+.case{padding:27px;background:linear-gradient(135deg,#f5f1fc,#fff)}.tag{display:inline-block;background:#fff;border:1px solid #ded8f0;border-radius:999px;padding:5px 10px;font-size:.7rem;font-weight:900;color:#6a5d99}.mission{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.mission div,.choice,.eco div,.flow div{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px;text-align:center;font-weight:900;font-size:.8rem}.choiceGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.eco{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.eco div{padding:20px 8px}.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}.reflection{background:linear-gradient(135deg,#edf7f4,#f8f6fc);border:1px solid var(--border);border-radius:23px;padding:28px}.reflectionGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.reflectionGrid div{background:#fff;border:1px solid var(--border);border-radius:16px;padding:19px}.navbottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--border);margin-top:28px;padding-top:19px;color:var(--blue);font-weight:900}.footer{background:var(--navy);color:#dbe7ef;padding:35px 22px}.footerIn{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.notice{font-size:.8rem;color:var(--muted)}
+@media(max-width:900px){.heroGrid,.resource{grid-template-columns:1fr}.journey{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.timeline{grid-template-columns:repeat(3,1fr)}.choiceGrid,.eco{grid-template-columns:repeat(3,1fr)}.mission{grid-template-columns:repeat(3,1fr)}.flow{grid-template-columns:repeat(3,1fr)}.reflectionGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.menu{display:block;border:1px solid var(--border);background:#fff;border-radius:10px;padding:8px 11px}nav{display:none;position:absolute;left:10px;right:10px;top:62px;background:#fff;border:1px solid var(--border);border-radius:15px;padding:9px;box-shadow:var(--shadow)}nav.open{display:grid;grid-template-columns:1fr 1fr}.cards,.journey,.reflectionGrid{grid-template-columns:1fr}.timeline,.choiceGrid,.eco,.mission,.flow{grid-template-columns:1fr 1fr}.hero{padding:50px 17px}.section{padding:45px 17px}}
+@media(max-width:430px){.timeline,.choiceGrid,.eco,.mission,.flow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="topin">
+<a class="brand" href="#beranda">🧭 NAVIGASI BELAJARKU<small>LMS Pendidikan Pancasila • Hak dan Kewajiban</small></a>
+<button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav>
+<a href="#beranda">Beranda</a><a href="#kenali">Kenali Diri</a><a href="#belajar">Belajar</a><a href="#kasus">Kasus</a><a href="#tantangan">Tantangan</a><a href="#ekosistem">Ekosistem</a><a href="#aksi">Aksi Nyata</a><a href="#refleksi">Jejak</a>
+</nav>
+</div>
+</header>
+
+<section id="beranda" class="hero">
+<div class="wrap heroGrid">
+<div>
+<span class="eyebrow">LMS PEMBELAJARAN PENDIDIKAN PANCASILA • FASE E</span>
+<h1>NAVIGASI<br>BELAJARKU</h1><h2>Hak dan Kewajiban</h2>
+<p>Dari mengenal diri, memahami konsep, menyelidiki kasus, berdiskusi, menunjukkan pemahaman, memahami lingkungan, melakukan aksi nyata, hingga melihat perkembangan diri.</p>
+<div class="actions"><a class="btn primary" href="#kenali">🚀 Mulai Perjalanan</a><a class="btn soft" href="#perjalanan">🗺️ Lihat Perjalanan</a></div>
+</div>
+<div class="heroCard"><div class="big">🌱</div><h3>Perjalanan Belajarmu</h3><p class="muted">Setiap tahap adalah kesempatan untuk memahami, mencoba, dan berkembang.</p><div class="progress"><span></span></div><small class="muted">Mulai dari Kenali Diri</small></div>
+</div>
+</section>
+
+<section id="perjalanan" class="section alt"><div class="wrap">
+<div class="head"><span class="kicker">Dashboard</span><h2>🗺️ Perjalanan Belajarmu</h2><p class="muted">Pilih tahap yang ingin kamu jalani.</p></div>
+<div class="journey">
+<a class="step" href="#kenali"><span class="num">01</span><h3>🌱 Kenali Diri</h3><p>Kenali pengetahuan awal dan kesiapanmu.</p></a>
+<a class="step" href="#belajar"><span class="num">02</span><h3>📚 Belajar</h3><p>Pahami hak, kewajiban, dan hubungan keduanya.</p></a>
+<a class="step" href="#kasus"><span class="num">03</span><h3>🔎 Kasus & Diskusi</h3><p>Selidiki masalah dan bandingkan sudut pandang.</p></a>
+<a class="step" href="#tantangan"><span class="num">04</span><h3>🎯 Tantangan</h3><p>Tunjukkan pemahaman dengan cara yang sesuai.</p></a>
+<a class="step" href="#ekosistem"><span class="num">05</span><h3>🌏 Ekosistem</h3><p>Lihat siapa dan apa yang membantu belajarmu.</p></a>
+<a class="step" href="#aksi"><span class="num">06</span><h3>🚀 Aksi Nyata</h3><p>Ubah pemahaman menjadi tindakan.</p></a>
+<a class="step" href="#refleksi"><span class="num">07</span><h3>🏁 Jejak Perkembangan</h3><p>Lihat kembali perubahan dalam perjalananmu.</p></a>
+</div>
+<div class="timeline"><div>🌱 KENALI</div><div>💚 SIAP</div><div>📚 PAHAMI</div><div>🔎 SELIDIKI</div><div>🎯 TANTANG</div><div>🚀 BERAKSI</div></div>
+</div></section>
+
+<section id="kenali" class="section"><div class="wrap">
+<div class="head"><span class="kicker">01 • Kenali Diri</span><h2>🌱 Sebelum Belajar, Kenali Dirimu</h2><p class="muted">Apa yang sudah kamu tahu? Bagaimana kesiapanmu? Apa yang kamu butuhkan agar belajar dengan baik?</p></div>
+<div class="cards">
+<div class="card blue"><div class="icon">👂</div><h3>Suara Belajarku</h3><p>Ceritakan pemahaman awalmu tentang hak dan kewajiban.</p><a class="btn primary" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSdTJCx4T3ZENAQrrbZGfTTcKwH20_so4rsAMUXoYtbHpCIpKg/viewform?usp=headerlink">📝 Isi Suara Belajarku</a></div>
+<div class="card mint"><div class="icon">💚</div><h3>Check-In Ruang Tumbuh</h3><p>Kenali kesiapanmu sebelum belajar dan pikirkan apa yang kamu butuhkan.</p><a class="btn primary" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSdVLAfFCUqECs0se02iuph5jkHc0ewTRnHXf1qJ4gE0qi_Q9Q/viewform?usp=headerlink">💚 Check-In Sekarang</a></div>
+<div class="card"><div class="icon">🎯</div><h3>Tujuan Kecilku</h3><p>Setelah melakukan check-in, pikirkan satu hal kecil yang ingin kamu capai.</p><div class="quote">“Hari ini saya ingin lebih memahami …”</div></div>
+</div>
+<div class="navbottom"><a href="#beranda">← Kembali ke Beranda</a><a href="#belajar">Lanjut ke Belajar →</a></div>
+</div></section>
+
+<section id="belajar" class="section alt"><div class="wrap">
+<div class="head"><span class="kicker">02 • Belajar</span><h2>📚 Pahami Hak dan Kewajiban</h2><p class="muted">Pelajari konsep utama melalui materi ringkas dan sumber terpercaya.</p></div>
+<div class="cards">
+<div class="card blue"><div class="icon">📘</div><h3>Hak</h3><p>Kenali pengertian hak dan contoh hak dalam kehidupan sebagai peserta didik dan warga negara.</p><a class="btn soft" target="_blank" href="https://buku.kemendikdasmen.go.id/katalog/pendidikan-pancasila-untuk-smamasmkmak-kelas-x">📖 Buka Buku Kelas X</a></div>
+<div class="card yellow"><div class="icon">📗</div><h3>Kewajiban</h3><p>Pahami kewajiban sebagai sesuatu yang perlu dilakukan dengan penuh tanggung jawab.</p><a class="btn soft" target="_blank" href="https://buku.kemendikdasmen.go.id/katalog/pendidikan-pancasila-untuk-smamasmkmak-kelas-x">📖 Pelajari Materi</a></div>
+<div class="card purple"><div class="icon">⚖️</div><h3>Hak & Kewajiban</h3><p>Pahami hubungan keduanya dalam kehidupan bersama dan pentingnya menghormati hak orang lain.</p><a class="btn soft" target="_blank" href="https://jdih.dpr.go.id/index/uu1945">📜 Buka UUD NRI 1945</a></div>
+</div>
+<div class="resource">
+<div class="source"><h3>📜 Landasan Konstitusional</h3><p>Gunakan UUD NRI Tahun 1945 sebagai rujukan untuk memahami hak dan kewajiban warga negara.</p><ul><li>Pasal 27 ayat (1)</li><li>Pasal 28J</li><li>Pasal 31</li></ul><a class="btn primary" target="_blank" href="https://jdih.dpr.go.id/index/uu1945">Buka JDIH DPR RI</a></div>
+<div class="source"><h3>🎥 Video Pembelajaran</h3><p>Simak video, lalu temukan contoh hak, kewajiban, dan hubungan keduanya.</p><a class="btn primary" target="_blank" href="https://www.youtube.com/watch?v=uCUSnqG0qEA">▶️ Tonton Video</a><p class="notice">Sumber: Indra Edu — Pendidikan Pancasila Kelas X.</p></div>
+</div>
+<div class="quote"><strong>💭 Pertanyaan pemantik:</strong><br>Mengapa kita tidak dapat hanya menuntut hak tanpa melaksanakan kewajiban?</div>
+<div class="navbottom"><a href="#kenali">← Kembali ke Kenali Diri</a><a href="#kasus">Lanjut ke Kasus & Diskusi →</a></div>
+</div></section>
+
+<section id="kasus" class="section"><div class="wrap">
+<div class="head"><span class="kicker">03 • Kasus & Diskusi</span><h2>🔎 Selidiki Kasus</h2><p class="muted">Bukan hanya mencari siapa yang salah, tetapi memahami hak, kewajiban, tanggung jawab, dan solusi.</p></div>
+<div class="case"><span class="tag">STUDI KASUS • LINGKUNGAN SEKOLAH</span><h3>Ketika Hak untuk Aman Bertemu dengan Kewajiban Menghormati</h3>
+<p>Sebuah kasus perundungan antarsiswa di SMP Negeri 1 Blora menjadi perhatian publik setelah rekaman peristiwa tersebut beredar. Kasus tersebut kemudian mendapat perhatian dari pemerintah daerah dan pihak sekolah.</p>
+<p>Kasus ini mengajak kita melihat persoalan dari sudut pandang <strong>hak, kewajiban, tanggung jawab, dan kehidupan bersama.</strong></p>
+<div class="actions"><a class="btn soft" target="_blank" href="https://www.blorakab.go.id/index.php/public/berita/detail/7467/bupati-turun-langsung-di-smpn-1---perangi-aksi-bullying-di-lingkungan-pendidikan">📖 Baca Sumber Kasus</a><a class="btn primary" target="_blank" href="https://www.youtube.com/watch?v=jiCPn3lyumw">▶️ Video Pemantik</a></div></div>
+<h3 style="margin-top:25px">🕵️ Misi Analisis</h3><p class="muted">Selesaikan misi dengan urutan berikut.</p>
+<div class="mission"><div>🔎 TEMUKAN</div><div>🔗 HUBUNGKAN</div><div>🧩 IDENTIFIKASI</div><div>💭 PIKIRKAN</div><div>💡 SOLUSI</div></div>
+<div class="quote"><strong>Pertanyaan kunci:</strong><br>Apakah seseorang hanya memiliki hak ketika berada di sekolah? Apa kewajiban kita ketika menggunakan hak? Bagaimana jika hak seseorang dilanggar?</div>
+<a class="btn primary" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSckVB0c5fuEwhDLZ2k_IPfY1hkCxMDZ6HKdBP-9OGbHW0tJIA/viewform?usp=headerlink">📝 Kerjakan Misi Analisis</a>
+<div class="source" style="margin-top:22px"><h3>💬 Diskusi</h3><p>Bandingkan hasil analisismu dengan teman. Apakah semua kelompok menemukan masalah dan solusi yang sama? Mengapa jawaban dapat berbeda?</p><strong>Diskusikan → Bandingkan → Tanggapi → Simpulkan</strong></div>
+<div class="navbottom"><a href="#belajar">← Kembali ke Belajar</a><a href="#tantangan">Lanjut ke Tantangan →</a></div>
+</div></section>
+
+<section id="tantangan" class="section alt"><div class="wrap">
+<div class="head"><span class="kicker">04 • Tantangan</span><h2>🎯 Tunjukkan Pemahamanmu</h2><p class="muted"><strong>Tujuannya sama. Cara menunjukkan pemahaman boleh berbeda.</strong></p></div>
+<div class="choiceGrid"><div class="choice">📝<br>Analisis Tertulis</div><div class="choice">🎨<br>Infografis</div><div class="choice">🎤<br>Penjelasan Lisan</div><div class="choice">🎥<br>Video Singkat</div><div class="choice">💡<br>Cara Lain</div></div>
+<div class="source" style="margin-top:22px"><h3>🎯 Misi Tantangan</h3><p>Pilih cara yang paling sesuai dengan dirimu untuk menunjukkan pemahaman tentang hubungan hak dan kewajiban. Jelaskan produk yang kamu buat dan kirimkan hasilnya melalui Form.</p><a class="btn primary" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeqkwI_WNrjtAMfBCWmndoj2H70uS1iIVqbiehu6zYMgx27Dg/viewform?usp=headerlink">📝 Kirim Hasil Tantangan</a></div>
+<div class="quote"><strong>🌱 Ingat:</strong> setiap orang dapat memiliki cara yang berbeda dalam menunjukkan pemahamannya.</div>
+<div class="navbottom"><a href="#kasus">← Kembali ke Kasus</a><a href="#ekosistem">Lanjut ke Ekosistem →</a></div>
+</div></section>
+
+<section id="ekosistem" class="section"><div class="wrap">
+<div class="head"><span class="kicker">05 • Ekosistem</span><h2>🌏 Peta Ekosistem Belajarku</h2><p class="muted"><strong>Aku tidak belajar sendirian.</strong> Perhatikan orang dan lingkungan yang membantu atau memengaruhi proses belajarmu.</p></div>
+<div class="eco"><div>👤<br>SAYA</div><div>👥<br>TEMAN</div><div>👩‍🏫<br>GURU & SEKOLAH</div><div>🏠<br>KELUARGA</div><div>🌏<br>MASYARAKAT</div></div>
+<div class="cards" style="margin-top:22px"><div class="card blue"><h3>🤝 Yang Membantu</h3><p>Siapa yang membantu saya belajar dan memahami hak serta kewajiban?</p></div><div class="card yellow"><h3>🚧 Yang Menghambat</h3><p>Apa yang terkadang membuat saya sulit belajar atau menjalankan kewajiban?</p></div><div class="card mint"><h3>💬 Dukungan yang Saya Butuhkan</h3><p>Siapa yang dapat saya mintai bantuan dan dukungan ketika mengalami kesulitan?</p></div></div>
+<div class="quote"><strong>💭 Renungkan:</strong><br>Hak dan kewajiban tidak hanya berkaitan dengan diri sendiri, tetapi juga dengan bagaimana kita hidup bersama orang lain.</div>
+<div class="navbottom"><a href="#tantangan">← Kembali ke Tantangan</a><a href="#aksi">Lanjut ke Aksi Nyata →</a></div>
+</div></section>
+
+<section id="aksi" class="section alt"><div class="wrap">
+<div class="head"><span class="kicker">06 • Projek Kepemimpinan</span><h2>🚀 Aksi Kecil, Dampak Nyata</h2><p class="muted"><strong>Dari memahami menjadi melakukan.</strong> Bersama kelompok, temukan masalah sederhana dan lakukan aksi nyata.</p></div>
+<div class="flow"><div>① TEMUKAN</div><div>② RENCANAKAN</div><div>③ BAGI PERAN</div><div>④ LAKSANAKAN</div><div>⑤ LIHAT DAMPAK</div><div>⑥ REFLEKSI</div></div>
+<div class="case" style="margin-top:24px;background:linear-gradient(135deg,#eef8f4,#fff)"><span class="tag">PROJEK KELOMPOK</span><h3>Gerakan Hak dan Kewajiban di Sekolah</h3><p>Pilih masalah sederhana di lingkungan sekolah yang berkaitan dengan hak dan kewajiban. Rancang aksi, bagi peran, lakukan, lalu lihat dampaknya.</p><p><strong>Pilihan aksi:</strong> poster • kampanye • video • diskusi • pengingat/komitmen kelas • kegiatan sederhana lainnya.</p><a class="btn primary" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSe5H8j-84Bw1g1sLg7OzdTkkdem4bbtE5Mu83I-bCmbpUiB5A/viewform?usp=header link">📝 Laporkan Aksi Kelompok</a></div>
+<div class="source" style="margin-top:22px"><h3>📌 Bukti Aksi</h3><p>Simpan dokumentasi kegiatan kelompok: foto, video, poster, tautan karya, respons peserta, atau bukti perubahan yang terlihat.</p></div>
+<div class="navbottom"><a href="#ekosistem">← Kembali ke Ekosistem</a><a href="#refleksi">Lanjut ke Jejak Perkembangan →</a></div>
+</div></section>
+
+<section id="refleksi" class="section"><div class="wrap">
+<div class="head"><span class="kicker">07 • Jejak Perkembangan</span><h2>🏁 Lihat Kembali Perjalananmu</h2><p class="muted">Akhiri perjalanan bukan hanya dengan melihat apa yang kamu pelajari, tetapi juga apa yang berubah dalam dirimu.</p></div>
+<div class="reflection"><div class="reflectionGrid"><div><strong>DULU SAYA BERPIKIR...</strong><p class="muted">Apa pemahamanmu sebelum belajar?</p></div><div><strong>SEKARANG SAYA MEMAHAMI...</strong><p class="muted">Apa yang kamu pahami sekarang?</p></div><div><strong>PERUBAHAN SAYA...</strong><p class="muted">Apa perkembangan yang paling kamu rasakan?</p></div><div><strong>LANGKAH SAYA SELANJUTNYA...</strong><p class="muted">Apa yang akan kamu pertahankan atau perbaiki?</p></div></div>
+<div style="margin-top:22px"><a class="btn primary" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeaZyyTit9I3KrUzGlpvcwelhvWyJLVvnY8RDHxFjRd5SqZRw/viewform?usp=headerlink">📝 Isi Refleksi Akhir</a></div></div>
+<div class="quote"><strong>🌱 Perjalananmu tidak berhenti di sini.</strong><br>Kenali dirimu → Pahami lingkunganmu → Ambil tindakan → Terus bertumbuh.</div>
+<div class="navbottom"><a href="#aksi">← Kembali ke Aksi Nyata</a><a href="#beranda">🏠 Kembali ke Beranda</a></div>
+</div></section>
+</body>
+</html>
